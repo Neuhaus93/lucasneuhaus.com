@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Panel from '$lib/components/panel.svelte';
+	import PanelContent from '$lib/components/panel/panel-content.svelte';
+	import Panel from '$lib/components/panel/panel.svelte';
 	import { SOCIAL_LINKS } from '$lib/data/social-links';
 	import SocialLinkItem from './social-link-item.svelte';
 </script>
@@ -7,7 +8,7 @@
 <Panel>
 	<h2 class="sr-only">Social Links</h2>
 
-	{#snippet content()}
+	<PanelContent>
 		<div class="relative">
 			<div
 				class="pointer-events-none absolute inset-0 -z-1 grid grid-cols-1 gap-4 max-sm:hidden sm:grid-cols-2"
@@ -27,5 +28,5 @@
 				{/each}
 			</div>
 		</div>
-	{/snippet}
+	</PanelContent>
 </Panel>

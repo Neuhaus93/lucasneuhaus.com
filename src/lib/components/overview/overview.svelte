@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Panel from '$lib/components/panel.svelte';
+	import PanelContent from '$lib/components/panel/panel-content.svelte';
+	import Panel from '$lib/components/panel/panel.svelte';
 	import { USER } from '$lib/data/user';
 	import { urlToName } from '$lib/utils/url';
 	import LinkIcon from '@lucide/svelte/icons/link';
@@ -11,7 +12,7 @@
 <Panel>
 	<h2 class="sr-only">Overview</h2>
 
-	{#snippet content()}
+	<PanelContent>
 		<IntroItem content={USER.address}>
 			{#snippet icon()}
 				<MapPinIcon />
@@ -25,5 +26,5 @@
 				<LinkIcon />
 			{/snippet}
 		</IntroItem>
-	{/snippet}
+	</PanelContent>
 </Panel>

@@ -1,8 +1,10 @@
 <script lang="ts">
+	import About from '$lib/components/about.svelte';
 	import HeaderMotion from '$lib/components/header-motion.svelte';
 	import Header from '$lib/components/header.svelte';
-	import Overview from '$lib/components/overview/index.svelte';
+	import Overview from '$lib/components/overview/overview.svelte';
 	import SocialLinks from '$lib/components/social-links/index.svelte';
+	import TechStack from '$lib/components/tech-stack/tech-stack.svelte';
 </script>
 
 {#snippet pattern()}
@@ -25,6 +27,12 @@
 			{@render pattern()}
 
 			<SocialLinks />
+			{@render pattern()}
+
+			<About />
+			{@render pattern()}
+
+			<TechStack />
 			{@render pattern()}
 		</main>
 	</div>
