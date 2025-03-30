@@ -1,2 +1,39 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
+
+:root {
+	/* zinc-200 */
+	--d-border: oklch(0.92 0.004 286.32);
+	/* zinc-100 */
+	--d-grid: oklch(0.967 0.001 286.375);
+}
+
+.dark {
+	/* zinc-800 */
+	--d-border: oklch(0.274 0.006 286.033);
+	/* zinc-900 */
+	--d-grid: oklch(0.21 0.006 285.885);
+}
+
+@theme inline {
+	--color-border: var(--d-border);
+	--color-grid: var(--d-grid);
+}
+
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		@apply border-border;
+	}
+}
+
+@utility screen-line-before {
+	@apply before:bg-grid relative before:absolute before:top-0 before:-left-[100vw] before:-z-1 before:h-px before:w-[200vw];
+}
+
+@utility screen-line-after {
+	@apply after:bg-grid relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-1 after:h-px after:w-[200vw];
+}

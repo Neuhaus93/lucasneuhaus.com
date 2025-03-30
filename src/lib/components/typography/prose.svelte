@@ -5,7 +5,7 @@
 	let { children }: { children: Snippet } = $props();
 </script>
 
-<p
+<div
 	data-slot="prose"
 	class={cn(
 		'prose prose-sm text-foreground prose-zinc dark:prose-invert max-w-none font-mono',
@@ -18,4 +18,4 @@
 	)}
 >
 	{@render children()}
-</p>
+</div>
