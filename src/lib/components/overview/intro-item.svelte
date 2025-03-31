@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	let { icon, content, href }: { icon: Snippet; content: string; href?: string } = $props();
+	let { icon, content, href }: { icon: Snippet; content: string | Snippet; href?: string } =
+		$props();
 	let isLink = $derived(!!href);
 </script>
 
@@ -10,18 +11,24 @@
 >
 	{@render icon()}
 
-	{#if isLink}
-		<a
-			class="text-balance underline-offset-4 hover:underline"
-			{href}
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			{content}
-		</a>
+	{#if typeof content === 'string'}
+		{#if isLink}
+			<a
+				class="text-balance underline-offset-4 hover:underline"
+				{href}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{content}
+			</a>
+		{:else}
+			<p class="text-balance">
+				{content}
+			</p>
+		{/if}
 	{:else}
 		<p class="text-balance">
-			{content}
+			{@render content()}
 		</p>
 	{/if}
 </div>

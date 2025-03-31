@@ -7,12 +7,17 @@
 	import MapPinIcon from '@lucide/svelte/icons/map-pin';
 	import EmailItem from './email-item.svelte';
 	import IntroItem from './intro-item.svelte';
+	import JobItem from './job-item.svelte';
 </script>
 
 <Panel>
 	<h2 class="sr-only">Overview</h2>
 
-	<PanelContent>
+	<PanelContent class="space-y-2">
+		{#each USER.jobs as job, idx (idx)}
+			<JobItem title={job.title} company={job.company} website={job.website} />
+		{/each}
+
 		<IntroItem content={USER.address}>
 			{#snippet icon()}
 				<MapPinIcon />

@@ -13,7 +13,7 @@
 <img
 	class={className}
 	alt={`${USER.displayName}'s avatar`}
-	src="https://place-hold.it/300"
+	src="/images/profile-picture.jpg"
 	width={size}
 	height={size}
 />

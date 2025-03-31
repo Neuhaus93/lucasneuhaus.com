@@ -26,7 +26,7 @@
 		</h3>
 
 		{#if experience.current}
-			<span class="relative flex items-center justify-center">
+			<span class="relative ml-1 flex items-center justify-center">
 				<span
 					class="bg-success-foreground absolute inline-flex size-3 animate-ping rounded-full opacity-50"
 				></span>
