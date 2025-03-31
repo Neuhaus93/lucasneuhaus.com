@@ -1,5 +1,6 @@
 <script lang="ts">
 	import About from '$lib/components/about.svelte';
+	import Experiences from '$lib/components/experiences/experiences.svelte';
 	import HeaderMotion from '$lib/components/header-motion.svelte';
 	import Header from '$lib/components/header.svelte';
 	import Overview from '$lib/components/overview/overview.svelte';
@@ -36,6 +37,9 @@
 			{@render pattern()}
 
 			<TechStack />
+			{@render pattern()}
+
+			<Experiences />
 			{@render pattern()}
 		</main>
 	</div>

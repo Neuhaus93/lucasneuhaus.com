@@ -2,7 +2,7 @@
 	import { cn } from '$lib/utils/cn';
 	import type { Snippet } from 'svelte';
 
-	let { children }: { children: Snippet } = $props();
+	let { children, class: className }: { children: Snippet; class?: string } = $props();
 </script>
 
 <div
@@ -14,7 +14,8 @@
 		'prose-lead:text-base',
 		'prose-a:font-medium prose-a:break-words prose-a:text-foreground prose-a:underline prose-a:underline-offset-4',
 		'prose-code:rounded prose-code:bg-muted prose-code:px-[0.3rem] prose-code:py-[0.2rem] prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none',
-		'prose-hr:border-grid'
+		'prose-hr:border-grid',
+		className
 	)}
 >
 	{@render children()}
