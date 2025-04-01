@@ -4,7 +4,14 @@
 
 <div class="flex flex-wrap gap-4 select-none">
 	{#each TECH_STACK as item, i (i)}
-		<a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.title}>
+		<a
+			href={item.href}
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label={item.title}
+			title={item.title}
+			class="flex items-center"
+		>
 			{#if item.theme}
 				<img
 					src={`/images/tech-stack-icons/${item.key}-light.svg`}

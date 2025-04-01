@@ -35,6 +35,7 @@
 		"svelte-markdown": "^0.4.1",
 		"tailwind-merge": "^3.0.2",
 		"tailwindcss": "^4.0.0",
+		"tw-animate-css": "^1.2.5",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
 		"vite": "^6.0.0"
