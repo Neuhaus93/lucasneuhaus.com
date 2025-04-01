@@ -1,9 +1,9 @@
 <script lang="ts">
+	import Markdown from '$lib/components/markdown/markdown.svelte';
 	import Tag from '$lib/components/tag.svelte';
 	import Prose from '$lib/components/typography/prose.svelte';
 	import type { ExperiencePosition } from '$lib/data/experiences';
 	import ChevronDownIcon from '@lucide/svelte/icons/chevron-down';
-	import SvelteMarkdown from 'svelte-markdown';
 	import { slide } from 'svelte/transition';
 	import ExperiencePositionIcon from './experience-position-icon.svelte';
 
@@ -52,7 +52,7 @@
 		>
 			{#if position.description}
 				<Prose class="pt-2 pl-7">
-					<SvelteMarkdown source={position.description} />
+					<Markdown source={position.description} />
 				</Prose>
 			{/if}
 

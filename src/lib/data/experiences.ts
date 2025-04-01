@@ -37,7 +37,7 @@ export const EXPERIENCES: Experience[] = [
 				year: '05.2023 - present',
 				employmentType: 'Full-time',
 				icon: 'code',
-				description: '- Worked on Spero Learning',
+				description: '- Worked on [Spero Learning](https://www.sperolearning.org/)',
 				skills: [
 					'TypeScript',
 					'Next.js',
