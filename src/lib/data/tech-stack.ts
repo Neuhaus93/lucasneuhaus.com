@@ -111,6 +111,12 @@ export const TECH_STACK: TechStack[] = [
 		categories: ['Containerization'],
 	},
 	{
+		key: 'postgres',
+		title: 'PostgreSQL',
+		href: 'https://www.postgresql.org/',
+		categories: ['Database'],
+	},
+	{
 		key: 'mysql',
 		title: 'MySQL',
 		href: 'https://www.mysql.com/',
