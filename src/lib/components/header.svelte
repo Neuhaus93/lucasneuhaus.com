@@ -2,19 +2,20 @@
 	import { USER } from '$lib/data/user';
 	import Avatar from './avatar.svelte';
 	import FlipSentences from './flip-sentences.svelte';
+	import ToggleTheme from './toggle-theme.svelte';
 </script>
 
 <header class="screen-line-before relative mt-2">
 	<!-- <ChanhDaiCoverHello /> -->
 
 	<div
-		class="border-grid bg-background ring-grid absolute top-0 right-0 flex items-center gap-3 ring ring-inset sm:pl-3"
+		class="border-grid bg-background ring-grid absolute top-0 right-0 flex items-center gap-3 ring ring-inset"
 	>
 		<!-- <Nav class="max-sm:hidden" /> -->
 
-		<div class="flex items-center gap-2">
+		<div class="z-10 flex items-center gap-2">
 			<!-- <NavItemGitHub /> -->
-			<!-- <ToggleTheme /> -->
+			<ToggleTheme />
 			<!-- <NavDropdown class="sm:hidden" /> -->
 		</div>
 	</div>

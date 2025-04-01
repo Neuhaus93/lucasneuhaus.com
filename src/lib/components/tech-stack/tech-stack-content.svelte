@@ -18,14 +18,14 @@
 					alt={`${item.title} light icon`}
 					width={32}
 					height={32}
-					class="hidden [html.light_&]:block"
+					class="block dark:hidden"
 				/>
 				<img
 					src={`/images/tech-stack-icons/${item.key}-dark.svg`}
 					alt={`${item.title} dark icon`}
 					width={32}
 					height={32}
-					class="hidden [html.dark_&]:block"
+					class="hidden dark:block"
 				/>
 			{:else}
 				<img
