@@ -3,7 +3,7 @@
 
 	let {
 		class: className,
-		size
+		size,
 	}: {
 		class?: string;
 		size?: number;

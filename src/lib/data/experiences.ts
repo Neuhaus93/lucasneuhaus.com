@@ -46,12 +46,12 @@ export const EXPERIENCES: Experience[] = [
 					'Agile',
 					'Teamwork',
 					'Research',
-					'Problem-solving'
+					'Problem-solving',
 				],
-				expanded: true
-			}
+				expanded: true,
+			},
 		],
-		current: true
+		current: true,
 	},
 	{
 		id: '1dda3031-9d2a-4d77-94d9-44c76e41e8c0',
@@ -73,10 +73,10 @@ payments.
 - Please check my [recommendation letter](https://drive.google.com/file/d/1D-svPsvsQFkgMDkwbNGBQrjgjhlo0GX2/view)
 `,
 				skills: ['TypeScript', 'React', 'Material UI', 'Teamwork', 'Research', 'Problem-solving'],
-				expanded: true
-			}
+				expanded: true,
+			},
 		],
-		current: false
+		current: false,
 	},
 	{
 		id: 'a0c9b6e8-f390-4d02-8c19-b025649926c7',
@@ -97,9 +97,9 @@ and Jest.
 and maintain.
 `,
 				skills: ['TypeScript', 'React', 'Material UI', 'Teamwork', 'Research', 'Problem-solving'],
-				expanded: true
-			}
-		]
+				expanded: true,
+			},
+		],
 	},
 	{
 		id: '8eaf2920-fa13-4544-8888-d4e04f52a92d',
@@ -117,9 +117,9 @@ system.
 - Consulted a no‐code site building company with any issue that required a developer.
 - Successfully completed many contracts on upwork.com and freelance.com.
 `,
-				skills: ['TypeScript', 'React', 'React Native']
-			}
-		]
+				skills: ['TypeScript', 'React', 'React Native'],
+			},
+		],
 	},
 	{
 		id: '8aaff17a-0362-47f1-a295-4460e13c016f',
@@ -131,8 +131,8 @@ system.
 				year: '2013 - 2018',
 				icon: 'education',
 				description: "- Bachelor's degree in Civil Engineering.",
-				skills: ['Self-learning', 'Teamwork', 'Presentation']
-			}
-		]
-	}
+				skills: ['Self-learning', 'Teamwork', 'Presentation'],
+			},
+		],
+	},
 ];

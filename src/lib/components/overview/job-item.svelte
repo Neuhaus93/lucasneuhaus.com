@@ -1,7 +1,7 @@
 <script lang="ts">
 	import IntroItem from './intro-item.svelte';
 	import CodeXmlIcon from '@lucide/svelte/icons/code-xml';
-	import LightbulbIcon from '@lucide/svelte/icons/Lightbulb';
+	import LightbulbIcon from '@lucide/svelte/icons/lightbulb';
 	import BriefcaseBusinessIcon from '@lucide/svelte/icons/briefcase-business';
 
 	let { title, website, company }: { title: string; website: string; company: string } = $props();

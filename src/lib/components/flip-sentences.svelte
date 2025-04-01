@@ -29,7 +29,7 @@
 					startAnimation(); // Restart the interval when the tab becomes visible
 				}
 			},
-			{ signal }
+			{ signal },
 		);
 
 		return () => {
@@ -45,7 +45,7 @@
 	<p
 		class={cn(
 			'text-muted-foreground absolute inset-0 left-4 self-center font-mono text-sm text-balance select-none',
-			className
+			className,
 		)}
 		in:fade={{ delay: 500, duration: 350 }}
 		out:fade={{ duration: 350 }}

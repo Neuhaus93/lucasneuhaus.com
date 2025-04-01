@@ -5,7 +5,7 @@
 		icon,
 		title,
 		description,
-		href
+		href,
 	}: {
 		icon: string;
 		title: string;

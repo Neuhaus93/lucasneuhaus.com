@@ -30,7 +30,7 @@
 			<ChevronDownIcon
 				class={[
 					'text-muted-foreground size-4 shrink-0 transition-transform duration-300',
-					!open && 'rotate-180'
+					!open && 'rotate-180',
 				]}
 			/>
 		</div>

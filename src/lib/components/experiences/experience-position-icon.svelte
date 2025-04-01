@@ -14,7 +14,7 @@
 		education: GraduationCapIcon,
 		business: BriefcaseBusinessIcon,
 		school: SchoolIcon,
-		idea: LightbulbIcon
+		idea: LightbulbIcon,
 	};
 
 	let { icon, class: className }: { icon: ExperiencePositionIcon | undefined; class?: string } =
