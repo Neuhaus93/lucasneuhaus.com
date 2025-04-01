@@ -6,6 +6,8 @@ export const USER = {
 	gender: 'male',
 	website: 'https://lucasneuhaus.com',
 	dateOfBirth: '1993-12-17', // YYYY-MM-DD
+	bio: 'Code. Solve. Design. Repeat. 🚀',
+	flipSentences: ['Software Developer', 'UI/UX Enthusiast'],
 	jobTitle: 'Software Developer',
 	jobs: [
 		{

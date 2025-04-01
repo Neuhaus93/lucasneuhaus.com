@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { USER } from '$lib/data/user';
 	import Avatar from './avatar.svelte';
+	import FlipSentences from './flip-sentences.svelte';
 </script>
 
-<header class="relative mt-2">
+<header class="screen-line-before relative mt-2">
 	<!-- <ChanhDaiCoverHello /> -->
 
 	<div
@@ -46,8 +47,8 @@
 					<!-- </SimpleTooltip> -->
 				</h1>
 
-				<div class="border-grid h-12 border-t py-1 pl-4 sm:h-auto">
-					<!-- <FlipSentences sentences={[USER.bio, ...USER.flipSentences]} /> -->
+				<div class="border-grid relative h-12 border-t py-1 pl-4 sm:h-[29px]">
+					<FlipSentences sentences={[USER.bio, ...USER.flipSentences]} />
 				</div>
 			</div>
 		</div>

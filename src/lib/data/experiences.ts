@@ -99,8 +99,27 @@ and maintain.
 				skills: ['TypeScript', 'React', 'Material UI', 'Teamwork', 'Research', 'Problem-solving'],
 				expanded: true
 			}
-		],
-		current: false
+		]
+	},
+	{
+		id: '8eaf2920-fa13-4544-8888-d4e04f52a92d',
+		company: 'Freelance',
+		positions: [
+			{
+				id: '64dee9da-773d-4dd3-90cb-2dd621c31bf6',
+				title: 'Full Stack Developer',
+				year: '2019 - 2022',
+				employmentType: 'Part-time',
+				icon: 'code',
+				description: `
+- Worked on multiple issues from Expensify App project, a multi‐platform React Native project which integrates WhatsApp‐like chat and a payment
+system.
+- Consulted a no‐code site building company with any issue that required a developer.
+- Successfully completed many contracts on upwork.com and freelance.com.
+`,
+				skills: ['TypeScript', 'React', 'React Native']
+			}
+		]
 	},
 	{
 		id: '8aaff17a-0362-47f1-a295-4460e13c016f',
@@ -109,7 +128,7 @@ and maintain.
 			{
 				id: 'c47f5903-88ae-4512-8a50-0b91b0cf99b6',
 				title: 'University of São Paulo - USP',
-				year: '02.2013 - 11.2018',
+				year: '2013 - 2018',
 				icon: 'education',
 				description: "- Bachelor's degree in Civil Engineering.",
 				skills: ['Self-learning', 'Teamwork', 'Presentation']
