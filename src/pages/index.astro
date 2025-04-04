@@ -1,11 +1,25 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from "../components/Header.astro";
+import Overview from "../components/profile/overview/Overview.astro";
+import Layout from "../layouts/Layout.astro";
+import Pattern from "@components/common/Pattern.astro";
+import SocialLinks from "@components/profile/social-links/SocialLinks.astro";
+import "../styles/global.css";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="max-w-screen overflow-x-hidden">
+    <div class="mx-auto px-4 md:max-w-3xl">
+      <Header />
+      <Pattern />
+
+      <main>
+        <Overview />
+        <Pattern />
+
+        <SocialLinks />
+        <Pattern />
+      </main>
+    </div>
+  </div>
 </Layout>

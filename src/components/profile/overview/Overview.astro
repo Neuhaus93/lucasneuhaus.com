@@ -1,0 +1,38 @@
+---
+import { USER } from "@data/user";
+import Panel from "@components/common/panel/Panel.astro";
+import PanelContent from "@components/common/panel/PanelContent.astro";
+import IntroItem from "./IntroItem.astro";
+import { LinkIcon, MapPinIcon } from "@lucide/astro";
+import { urlToName } from "@utils/string";
+import EmailItem from "./EmailItem.astro";
+import JobItem from "./JobItem.astro";
+---
+
+<Panel>
+  <h2 class="sr-only">Overview</h2>
+
+  <PanelContent class="space-y-2">
+    {
+      USER.jobs.map((job) => (
+        <JobItem
+          title={job.title}
+          website={job.website}
+          company={job.company}
+        />
+      ))
+    }
+
+    <IntroItem>
+      <MapPinIcon />
+      <Fragment slot="content" set:text={USER.address} />
+    </IntroItem>
+
+    <EmailItem />
+
+    <IntroItem href={USER.website}>
+      <LinkIcon />
+      <Fragment slot="content" set:text={urlToName(USER.website)} />
+    </IntroItem>
+  </PanelContent>
+</Panel>

@@ -1,0 +1,32 @@
+---
+import {
+  CodeXmlIcon,
+  LightbulbIcon,
+  BriefcaseBusinessIcon,
+} from "@lucide/astro";
+import IntroItem from "./IntroItem.astro";
+type Props = {
+  title: string;
+  website: string;
+  company: string;
+};
+const { title, website, company } = Astro.props;
+
+let JobIcon;
+if (/(developer|engineer)/i.test(title)) {
+  JobIcon = CodeXmlIcon;
+} else if (/(founder|co-founder)/i.test(title)) {
+  JobIcon = LightbulbIcon;
+} else {
+  JobIcon = BriefcaseBusinessIcon;
+}
+---
+
+<IntroItem>
+  <JobIcon />
+
+  <Fragment
+    slot="content"
+    set:html={`${title} @<a class="hover:underline" href=${website} target="_blank" rel="noopener noreferrer">${company}</a>`}
+  />
+</IntroItem>

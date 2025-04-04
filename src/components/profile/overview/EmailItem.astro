@@ -1,0 +1,29 @@
+---
+import IntroItem from "./IntroItem.astro";
+import { MailIcon } from "@lucide/astro";
+const id = "overview-email-item";
+---
+
+<script>
+  import { decodeEmail } from "@utils/string";
+  import { USER } from "@data/user";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const el = document.getElementById(
+      "overview-email-item",
+    ) as HTMLAnchorElement;
+    if (el) {
+      el.textContent = decodeEmail(USER.email);
+      el.href = `mailto:${USER.email}`;
+    }
+  });
+</script>
+<IntroItem {id} href="#">
+  <MailIcon />
+  <Fragment
+    slot="content"
+    set:text="[Email protected]"
+    <
+    IntroItem
+  /></IntroItem
+>

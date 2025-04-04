@@ -1,0 +1,16 @@
+---
+import { USER } from "../data/user";
+import profileImage from "../assets/images/profile-320.webp";
+import { Image } from "astro:assets";
+
+type Props = {
+  class: string;
+};
+const { class: className } = Astro.props;
+---
+
+<Image
+  class={className}
+  alt={`${USER.displayName}'s avatar`}
+  src={profileImage}
+/>

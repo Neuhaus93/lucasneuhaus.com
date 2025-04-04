@@ -1,0 +1,22 @@
+---
+import Panel from "@components/common/panel/Panel.astro";
+import { SOCIAL_LINKS } from "@data/social-links";
+import SocialLinkItem from "./SocialLinkItem.astro";
+---
+
+<Panel>
+  <h2 class="sr-only">Social Links</h2>
+
+  <div class="relative">
+    <div
+      class="pointer-events-none absolute inset-0 -z-1 grid grid-cols-1 gap-4 max-sm:hidden sm:grid-cols-2"
+    >
+      <div class="border-grid border-r"></div>
+      <div class="border-grid border-l"></div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {SOCIAL_LINKS.map((link) => <SocialLinkItem {...link} />)}
+    </div>
+  </div>
+</Panel>
