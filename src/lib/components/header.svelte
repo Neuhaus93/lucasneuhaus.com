@@ -2,6 +2,7 @@
 	import { USER } from '$lib/data/user';
 	import Avatar from './avatar.svelte';
 	import FlipSentences from './flip-sentences.svelte';
+	import NavItemGithub from './nav-item-github.svelte';
 	import ToggleTheme from './toggle-theme.svelte';
 </script>
 
@@ -9,12 +10,12 @@
 	<!-- <ChanhDaiCoverHello /> -->
 
 	<div
-		class="border-grid bg-background ring-grid absolute top-0 right-0 flex items-center gap-3 ring ring-inset"
+		class="border-grid bg-background ring-grid absolute top-0 right-0 flex items-center gap-3 rounded-bl-2xl ring ring-inset"
 	>
 		<!-- <Nav class="max-sm:hidden" /> -->
 
 		<div class="z-10 flex items-center gap-2">
-			<!-- <NavItemGitHub /> -->
+			<NavItemGithub />
 			<ToggleTheme />
 			<!-- <NavDropdown class="sm:hidden" /> -->
 		</div>
