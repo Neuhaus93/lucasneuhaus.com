@@ -1,7 +1,7 @@
 <script lang="ts">
 	import About from '$lib/components/about.svelte';
 	import Experiences from '$lib/components/experiences/experiences.svelte';
-	// import HeaderMotion from '$lib/components/header-motion.svelte';
+	import StickyHeader from '$lib/components/sticky-header.svelte';
 	import Header from '$lib/components/header.svelte';
 	import Overview from '$lib/components/overview/overview.svelte';
 	import SocialLinks from '$lib/components/social-links/social-links.svelte';
@@ -19,7 +19,7 @@
 	></div>
 {/snippet}
 
-<!-- <HeaderMotion /> -->
+<StickyHeader />
 
 <div class="max-w-screen overflow-x-hidden">
 	<div class="mx-auto px-4 md:max-w-3xl">
