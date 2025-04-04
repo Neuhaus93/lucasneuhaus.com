@@ -13,7 +13,7 @@
 <img
 	class={className}
 	alt={`${USER.displayName}'s avatar`}
-	src="/images/profile-picture.jpg"
+	src="/images/profile-picture.webp"
 	width={size}
 	height={size}
 />
