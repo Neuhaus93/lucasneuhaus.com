@@ -14,6 +14,7 @@
 		>
 			{#if item.theme}
 				<img
+					loading="lazy"
 					src={`/images/tech-stack-icons/${item.key}-light.svg`}
 					alt={`${item.title} light icon`}
 					width={32}
@@ -21,6 +22,7 @@
 					class="block dark:hidden"
 				/>
 				<img
+					loading="lazy"
 					src={`/images/tech-stack-icons/${item.key}-dark.svg`}
 					alt={`${item.title} dark icon`}
 					width={32}
@@ -29,6 +31,7 @@
 				/>
 			{:else}
 				<img
+					loading="lazy"
 					src={`/images/tech-stack-icons/${item.key}.svg`}
 					alt={`${item.title} icon`}
 					width={32}

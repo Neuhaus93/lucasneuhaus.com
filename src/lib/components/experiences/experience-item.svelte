@@ -10,6 +10,7 @@
 		<span class="flex size-6 shrink-0 items-center justify-center">
 			{#if experience.companyLogo}
 				<img
+					loading="lazy"
 					src={experience.companyLogo}
 					alt={experience.company}
 					width={24}
