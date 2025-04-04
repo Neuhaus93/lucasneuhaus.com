@@ -23,4 +23,5 @@ Hi, my name is Lucas Neuhaus, a self-taught software developer from Brazil. In 2
 
 I'm naturally curious, I love learning new technologies and building complex applications. Over the past few years, I have primarily focused on utilizing React, Typescript, and Material UI in my work. This technology stack is one in which I possess a high level of proficiency and confidence.
 `,
+	keywords: 'lucas, arendt, neuhaus, software, developer',
 };
