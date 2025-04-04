@@ -1,10 +1,11 @@
 ---
+import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Overview from "../components/profile/overview/Overview.astro";
 import Layout from "../layouts/Layout.astro";
 import Pattern from "@components/common/Pattern.astro";
 import SocialLinks from "@components/profile/social-links/SocialLinks.astro";
-import "../styles/global.css";
+import About from "@components/profile/About.astro";
 ---
 
 <Layout>
@@ -18,6 +19,9 @@ import "../styles/global.css";
         <Pattern />
 
         <SocialLinks />
+        <Pattern />
+
+        <About />
         <Pattern />
       </main>
     </div>

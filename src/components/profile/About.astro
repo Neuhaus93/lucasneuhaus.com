@@ -1,0 +1,14 @@
+---
+import Panel from "@components/common/panel/Panel.astro";
+import PanelContent from "@components/common/panel/PanelContent.astro";
+import Prose from "@components/common/Prose.astro";
+import { Content as UserAbout } from "@data/user-about.md";
+---
+
+<Panel title="About">
+  <PanelContent>
+    <Prose>
+      <UserAbout />
+    </Prose>
+  </PanelContent>
+</Panel>
