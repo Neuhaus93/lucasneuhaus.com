@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { USER } from '$lib/data/user';
-	import '../app.css';
 	import { ModeWatcher } from 'mode-watcher';
+	import '@fontsource-variable/roboto-condensed';
+	import '@fontsource-variable/jetbrains-mono';
+	import '../app.css';
 
 	let { children } = $props();
 </script>
