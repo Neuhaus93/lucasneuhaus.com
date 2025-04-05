@@ -1,5 +1,4 @@
 ---
-import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Overview from "../components/profile/overview/Overview.astro";
 import Layout from "../layouts/Layout.astro";
@@ -8,9 +7,18 @@ import SocialLinks from "@components/profile/social-links/SocialLinks.astro";
 import About from "@components/profile/About.astro";
 import TechStack from "@components/profile/tech-stack/TechStack.astro";
 import Experiences from "@components/profile/experiences/Experiences.astro";
+import StickyHeader from "@components/StickyHeader.svelte";
+import Avatar from "@components/Avatar.astro";
 ---
 
 <Layout>
+  <StickyHeader client:idle>
+    <Avatar
+      slot="avatar"
+      class="ring-offset-background size-12 rounded-full ring-1 ring-zinc-300 ring-offset-1 dark:ring-zinc-700"
+    />
+  </StickyHeader>
+
   <div class="max-w-screen overflow-x-hidden">
     <div class="mx-auto px-4 md:max-w-3xl">
       <Header />

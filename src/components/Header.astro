@@ -1,7 +1,10 @@
 ---
-import { USER } from "../data/user";
+import NavItemGithub from "@components/common/NavItemGithub.svelte";
+// import ToggleTheme from "@components/common/ToggleTheme.svelte";
+import { USER } from "@data/user";
 import Avatar from "./Avatar.astro";
 import FlipSentences from "./FlipSentences.svelte";
+import ThemeIcon from "./common/ThemeIcon.astro";
 ---
 
 <header class="screen-line-before relative mt-2">
@@ -13,8 +16,9 @@ import FlipSentences from "./FlipSentences.svelte";
     <!-- <Nav class="max-sm:hidden" /> -->
 
     <div class="z-10 flex items-center gap-2">
-      <!-- <NavItemGithub /> -->
-      <!-- <ToggleTheme /> -->
+      <NavItemGithub />
+      <!-- <ToggleTheme client:idle /> -->
+      <ThemeIcon />
       <!-- <NavDropdown class="sm:hidden" /> -->
     </div>
   </div>
