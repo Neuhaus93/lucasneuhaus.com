@@ -1,6 +1,6 @@
 <script lang="ts">
   import NavItemGithub from "@components/common/NavItemGithub.svelte";
-  // import ToggleTheme from "@components/common/ToggleTheme.svelte";
+  import ThemeToggle from "@components/common/ThemeToggle.svelte";
   import { USER } from "@data/user";
   import type { Snippet } from "svelte";
   import { scrollY } from "svelte/reactivity/window";
@@ -33,7 +33,7 @@
 
             <div class="flex translate-x-px items-center gap-2">
               <NavItemGithub />
-              <!-- <ToggleTheme /> -->
+              <ThemeToggle />
               <!-- <NavDropdown class="sm:hidden" /> -->
             </div>
           </div>

@@ -1,15 +1,12 @@
 ---
 import NavItemGithub from "@components/common/NavItemGithub.svelte";
-// import ToggleTheme from "@components/common/ToggleTheme.svelte";
+import ThemeToggle from "@components/common/ThemeToggle.svelte";
 import { USER } from "@data/user";
 import Avatar from "./Avatar.astro";
 import FlipSentences from "./FlipSentences.svelte";
-import ThemeIcon from "./common/ThemeIcon.astro";
 ---
 
 <header class="screen-line-before relative mt-2">
-  <!-- <ChanhDaiCoverHello /> -->
-
   <div
     class="border-grid bg-background ring-grid absolute top-0 right-0 flex items-center gap-3 rounded-bl-2xl ring ring-inset"
   >
@@ -17,8 +14,7 @@ import ThemeIcon from "./common/ThemeIcon.astro";
 
     <div class="z-10 flex items-center gap-2">
       <NavItemGithub />
-      <!-- <ToggleTheme client:idle /> -->
-      <ThemeIcon />
+      <ThemeToggle client:idle />
       <!-- <NavDropdown class="sm:hidden" /> -->
     </div>
   </div>
@@ -34,23 +30,20 @@ import ThemeIcon from "./common/ThemeIcon.astro";
 
     <div class="flex flex-1 flex-col">
       <div class="flex grow items-end pb-1 pl-4">
-        <div
+        <p
           class="line-clamp-1 font-mono text-xs text-zinc-300 select-none dark:text-zinc-800"
         >
           text-3xl
           <span class="inline dark:hidden"> text-zinc-950</span>
           <span class="hidden dark:inline"> text-zinc-50</span>
           font-medium
-        </div>
+        </p>
       </div>
 
       <div class="border-grid border-t">
         <h1 class="font-heading flex items-center pl-4 text-3xl font-medium">
           {USER.displayName}
           &nbsp;
-          <!-- <SimpleTooltip content={`Official website of ${USER.displayName}`}> -->
-          <!-- 	<VerifiedIcon class="text-info-foreground size-[0.6em] translate-y-px" /> -->
-          <!-- </SimpleTooltip> -->
         </h1>
 
         <div class="border-grid relative h-12 border-t py-1 pl-4 sm:h-[29px]">

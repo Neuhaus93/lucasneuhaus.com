@@ -3,6 +3,7 @@ import "@fontsource-variable/roboto-condensed";
 import "@fontsource-variable/jetbrains-mono";
 import jetBrainsMonoWoff2 from "@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2";
 import "../styles/global.css";
+import { USER } from "@data/user";
 ---
 
 <!doctype html>
@@ -19,7 +20,10 @@ import "../styles/global.css";
       crossorigin="anonymous"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>{USER.displayName} – {USER.jobTitle}</title>
+    <meta name="description" content={USER.bio} />
+    <meta name="keywords" content={USER.keywords} />
+    <meta name="author" content={USER.displayName} />
   </head>
   <body>
     <slot />
@@ -34,3 +38,24 @@ import "../styles/global.css";
     height: 100%;
   }
 </style>
+
+<script is:inline>
+  const theme = (() => {
+    const localStorageTheme = localStorage?.getItem("theme") ?? "";
+    if (["dark", "light"].includes(localStorageTheme)) {
+      return localStorageTheme;
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+
+  window.localStorage.setItem("theme", theme);
+</script>
