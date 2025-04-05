@@ -1,14 +1,15 @@
 ---
 import Panel from "@components/common/panel/Panel.astro";
 import PanelContent from "@components/common/panel/PanelContent.astro";
-import Prose from "@components/common/Prose.astro";
-import { Content as UserAbout } from "@data/user-about.md";
+import Prose from "@components/common/Prose.svelte";
+import Markdown from "@components/common/markdown/Markdown.svelte";
+import { USER } from "@data/user";
 ---
 
 <Panel title="About">
   <PanelContent>
     <Prose>
-      <UserAbout />
+      <Markdown source={USER.about} />
     </Prose>
   </PanelContent>
 </Panel>

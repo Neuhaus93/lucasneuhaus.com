@@ -16,7 +16,12 @@ const { href, icon, title, description } = Astro.props;
   rel="noopener noreferrer"
 >
   <div class="relative size-12 shrink-0">
-    <Image class="rounded-xl size-12" src={icon} alt={`${title}'s icon`} />
+    <Image
+      class="rounded-xl size-12"
+      src={icon}
+      alt={`${title}'s icon`}
+      loading="eager"
+    />
     <div
       class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/8 ring-inset dark:ring-white/8"
     >

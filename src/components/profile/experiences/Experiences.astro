@@ -1,0 +1,23 @@
+---
+import Panel from "@components/common/panel/Panel.astro";
+import PanelContent from "@components/common/panel/PanelContent.astro";
+import { EXPERIENCES } from "@data/experiences";
+import ExperienceItem from "./ExperienceItem.astro";
+import ExperiencePosition from "./ExperiencePosition.svelte";
+---
+
+<Panel title="Experiences">
+  <PanelContent>
+    <div>
+      {
+        EXPERIENCES.map((experience) => (
+          <ExperienceItem {experience}>
+            {experience.positions.map((position) => (
+              <ExperiencePosition client:idle position={position} />
+            ))}
+          </ExperienceItem>
+        ))
+      }
+    </div>
+  </PanelContent>
+</Panel>

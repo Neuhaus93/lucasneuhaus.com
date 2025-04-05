@@ -18,11 +18,13 @@ import {Image} from 'astro:assets'
         src={item.icon[0]}
         alt={`${item.title} light icon`}
         class="block dark:hidden size-8"
+        loading="eager"
       />
       <Image
         src={item.icon[1]}
         alt={`${item.title} dark icon`}
         class="hidden dark:block size-8"
+        loading="eager"
       />
     )}
     {!Array.isArray(item.icon) && (   
@@ -30,6 +32,7 @@ import {Image} from 'astro:assets'
         src={item.icon}
         alt={`${item.title} icon`}
         class="size-8"
+        loading="eager"
       />
     )}
 		</a>

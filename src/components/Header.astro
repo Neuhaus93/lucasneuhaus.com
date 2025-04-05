@@ -51,7 +51,7 @@ import FlipSentences from "./FlipSentences.svelte";
 
         <div class="border-grid relative h-12 border-t py-1 pl-4 sm:h-[29px]">
           <FlipSentences
-            client:load
+            client:idle
             sentences={[USER.bio, ...USER.flipSentences]}
           />
         </div>

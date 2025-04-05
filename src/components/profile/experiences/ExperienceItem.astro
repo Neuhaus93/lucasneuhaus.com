@@ -1,0 +1,49 @@
+---
+import type { Experience } from "@data/experiences";
+import { Image } from "astro:assets";
+
+type Props = {
+  experience: Experience;
+};
+const { experience } = Astro.props;
+---
+
+<div class="screen-line-after space-y-4 py-4">
+  <div class="flex items-center space-x-2">
+    <span class="flex size-6 shrink-0 items-center justify-center">
+      {
+        !!experience.companyLogo && (
+          <Image
+            src={experience.companyLogo}
+            alt={experience.company}
+            class="rounded-full size-6"
+          />
+        )
+      }
+      {
+        !experience.companyLogo && (
+          <span class="flex size-2 rounded-full bg-zinc-300 dark:bg-zinc-600" />
+        )
+      }
+    </span>
+
+    <h3 class="font-heading text-lg leading-snug font-medium">
+      {experience.company}
+    </h3>
+
+    {
+      !!experience.current && (
+        <span class="relative ml-1 flex items-center justify-center">
+          <span class="bg-success-foreground absolute inline-flex size-3 animate-ping rounded-full opacity-50" />
+          <span class="bg-success-foreground relative inline-flex size-2 rounded-full" />
+        </span>
+      )
+    }
+  </div>
+
+  <div
+    class="before:bg-border relative space-y-4 pl-1 before:absolute before:left-3 before:h-full before:w-px"
+  >
+    <slot />
+  </div>
+</div>
