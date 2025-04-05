@@ -1,0 +1,34 @@
+---
+import { SOCIAL_LINKS } from "@data/social-links";
+import { SOURCE_CODE_GITHUB_URL } from "@data/site";
+---
+
+<footer
+  class="screen-line-before border-x border-grid pt-5 pb-[env(safe-area-inset-bottom,0px)]"
+>
+  <p
+    class="mb-1 text-center font-mono text-sm text-balance text-muted-foreground"
+  >
+    Inspired by chanhdai.com and tailwindcss.com.
+  </p>
+
+  <p
+    class="mb-4 text-center font-mono text-sm text-balance text-muted-foreground"
+  >
+    Built by{" "}
+    <a
+      class="link"
+      href={SOCIAL_LINKS.github.href}
+      target="_blank"
+      rel="noopener noreferrer">Lucas Neuhaus</a
+    >. The source code is available on{" "}
+    <a
+      class="link"
+      href={SOURCE_CODE_GITHUB_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub</a
+    >.
+  </p>
+</footer>

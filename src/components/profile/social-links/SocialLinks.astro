@@ -16,7 +16,7 @@ import SocialLinkItem from "./SocialLinkItem.astro";
     </div>
 
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {SOCIAL_LINKS.map((link) => <SocialLinkItem {...link} />)}
+      {Object.values(SOCIAL_LINKS).map((link) => <SocialLinkItem {...link} />)}
     </div>
   </div>
 </Panel>

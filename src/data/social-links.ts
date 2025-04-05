@@ -8,17 +8,17 @@ export type SocialLink = {
   href: string;
 };
 
-export const SOCIAL_LINKS: SocialLink[] = [
-  {
+export const SOCIAL_LINKS: Record<"linkedin" | "github", SocialLink> = {
+  linkedin: {
     icon: LinkedinImage,
     title: "LinkedIn",
     description: "lucas-neuhaus",
     href: "https://linkedin.com/in/lucas-neuhaus",
   },
-  {
+  github: {
     icon: GithubImage,
     title: "GitHub",
     description: "Neuhaus93",
     href: "https://github.com/Neuhaus93",
   },
-];
+};
