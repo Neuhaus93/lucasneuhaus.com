@@ -1,0 +1,37 @@
+---
+import { TECH_STACK } from '@data/tech-stack'
+import {Image} from 'astro:assets'
+---
+
+<div class="flex flex-wrap gap-4 select-none">
+  {TECH_STACK.map((item) => (   
+		<a
+			href={item.href}
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label={item.title}
+			title={item.title}
+			class="flex items-center"
+		>
+    {!!Array.isArray(item.icon) && (  
+      <Image
+        src={item.icon[0]}
+        alt={`${item.title} light icon`}
+        class="block dark:hidden size-8"
+      />
+      <Image
+        src={item.icon[1]}
+        alt={`${item.title} dark icon`}
+        class="hidden dark:block size-8"
+      />
+    )}
+    {!Array.isArray(item.icon) && (   
+      <Image
+        src={item.icon}
+        alt={`${item.title} icon`}
+        class="size-8"
+      />
+    )}
+		</a>
+  ))}
+</div>
