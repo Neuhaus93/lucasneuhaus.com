@@ -1,18 +1,46 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { fade } from "svelte/transition";
 
   let { sentences }: { sentences: string[] } = $props();
   let currentSentence = $state(0);
+  let animationStatus = $state<"in-progress" | "waiting">("waiting");
   let interval: ReturnType<typeof setTimeout> | null = null;
 
-  onMount(() => {
-    const startAnimation = () => {
-      interval = setInterval(() => {
-        currentSentence = (currentSentence + 1) % sentences.length;
-      }, 3500);
+  function typewriter(node: Element, { speed = 1 } = {}) {
+    const valid =
+      node.childNodes.length === 1 &&
+      node.childNodes[0].nodeType === Node.TEXT_NODE;
+
+    if (!valid) {
+      throw new Error(
+        `This transition only works on elements with a single text node child`,
+      );
+    }
+
+    const text = node.textContent ?? "";
+    const duration = text.length / (speed * 0.01);
+
+    return {
+      duration,
+      tick: (t: number) => {
+        const i = Math.trunc(text.length * t);
+        node.textContent = text.slice(0, i);
+      },
     };
-    startAnimation();
+  }
+
+  const onintrostart = () => (animationStatus = "in-progress");
+  const onintroend = () => {
+    animationStatus = "waiting";
+    interval = setTimeout(() => {
+      currentSentence = (currentSentence + 1) % sentences.length;
+    }, 3500);
+  };
+
+  onMount(() => {
+    interval = setTimeout(() => {
+      currentSentence = (currentSentence + 1) % sentences.length;
+    }, 3500);
 
     const abortController = new AbortController();
     const { signal } = abortController;
@@ -25,27 +53,42 @@
           interval = null;
         } else if (document.visibilityState === "visible") {
           currentSentence = (currentSentence + 1) % sentences.length; // Show the next sentence immediately
-          startAnimation(); // Restart the interval when the tab becomes visible
         }
       },
       { signal },
     );
 
     return () => {
-      if (interval) {
-        clearInterval(interval);
-      }
+      if (interval) clearInterval(interval);
       abortController.abort();
     };
   });
 </script>
 
 {#key currentSentence}
-  <p
-    class={"text-muted-foreground absolute inset-0 left-4 self-center font-mono text-sm text-balance select-none"}
-    in:fade={{ delay: 500, duration: 350 }}
-    out:fade={{ duration: 350 }}
+  <span
+    id="test"
+    class:blink={animationStatus === "waiting"}
+    class={[
+      "text-muted-foreground relative font-mono text-sm text-balance select-none",
+      "after:content-[''] after:absolute after:bg-muted-foreground after:top-0 after:bottom-0 after:right-[-3px] after:w-px",
+    ]}
+    in:typewriter
+    {onintrostart}
+    {onintroend}
   >
     {sentences[currentSentence]}
-  </p>
+  </span>
 {/key}
+
+<style>
+  span.blink::after {
+    animation: blink 1.3s steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+</style>
