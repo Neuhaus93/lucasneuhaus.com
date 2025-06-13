@@ -19,9 +19,11 @@ export const USER = {
   address: "São Carlos, SP - Brazil",
   email: "bHVjYXMubmV1aGF1czkzQGdtYWlsLmNvbQ==", // base 64 encoded
   about: `
-Hi, my name is Lucas Neuhaus, a self-taught software developer from Brazil. In 2018, I obtained my degree in Civil Engineering and I was unhappy until I discovered my genuine passion: Programming. Since then, I have been working in both full-time and freelance positions.
+I build modern web applications with a focus on clean, fast, and thoughtful user experiences. My strength lies in the frontend, especially with React, Next.js, and Svelte, but I’m equally comfortable across the stack, with a solid grasp of APIs, data models, and deployment.
 
-I'm naturally curious, I love learning new technologies and building complex applications. Over the past few years, I have primarily focused on utilizing React, Typescript, and Material UI in my work. This technology stack is one in which I possess a high level of proficiency and confidence.
+I care deeply about the details: how something feels, how it performs, and how maintainable it is over time. I write code with clarity and intention, always aiming for simplicity without cutting corners.
+
+I work best in environments where autonomy is paired with strong collaboration, and where good ideas matter more than job titles. I'm fluent in English, based in Brazil, and learning German as I look ahead to new challenges.
 `,
   keywords: "lucas, arendt, neuhaus, software, developer",
 };

@@ -18,7 +18,7 @@ export const SOCIAL_LINKS: Record<"linkedin" | "github", SocialLink> = {
   github: {
     icon: GithubImage,
     title: "GitHub",
-    description: "Neuhaus93",
-    href: "https://github.com/Neuhaus93",
+    description: "lucas-neuhauss",
+    href: "https://github.com/lucas-neuhauss",
   },
 };
