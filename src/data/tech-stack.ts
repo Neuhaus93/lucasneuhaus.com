@@ -4,6 +4,8 @@ import ChatgptLightImage from "@assets/images/tech-stack-icons/chatgpt-light.svg
 import DockerImage from "@assets/images/tech-stack-icons/docker.svg";
 import FigmaImage from "@assets/images/tech-stack-icons/figma.svg";
 import GitImage from "@assets/images/tech-stack-icons/git.svg";
+import GithubCopilotLightImage from "@assets/images/tech-stack-icons/github-copilot-light.svg";
+import GithubCopilotDarkImage from "@assets/images/tech-stack-icons/github-copilot-dark.svg";
 import JavascriptImage from "@assets/images/tech-stack-icons/js.svg";
 import MaterialImage from "@assets/images/tech-stack-icons/material-ui.svg";
 import MotionImage from "@assets/images/tech-stack-icons/motion.svg";
@@ -188,5 +190,13 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Tools", "AI"],
     theme: true,
     icon: [ChatgptLightImage, ChatgptDarkImage],
+  },
+  {
+    key: "github-copilot",
+    title: "Github Copilot",
+    href: "https://github.com/features/copilot",
+    categories: ["Tools", "AI"],
+    theme: true,
+    icon: [GithubCopilotLightImage, GithubCopilotDarkImage],
   },
 ];

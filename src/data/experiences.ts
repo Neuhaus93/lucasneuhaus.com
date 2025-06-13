@@ -1,6 +1,7 @@
 import BairesDevImage from "@assets/images/companies/bairesdev.webp";
 import LazzyImage from "@assets/images/companies/lazzy.webp";
 import ConvertImage from "@assets/images/companies/convert.png";
+import SperoLearningImage from "@assets/images/companies/spero-learning.webp";
 
 export type ExperiencePositionIcon =
   | "code"
@@ -29,16 +30,21 @@ export type Experience = {
 
 export const EXPERIENCES: Experience[] = [
   {
-    company: "BairesDev",
-    companyLogo: BairesDevImage,
+    company: "Spero Learning",
+    companyLogo: SperoLearningImage,
     positions: [
       {
         title: "Senior Full-stack Developer",
         year: "05.2023 - present",
         employmentType: "Full-time",
         icon: "code",
-        description:
-          "- Worked on [Spero Learning](https://www.sperolearning.org/).",
+        description: `
+- Contributing to a curriculum platform that allows schools and teachers to build and manage educational content including courses, lessons, and quizzes.
+- Working with a modern fullstack TypeScript stack including Next.js, TailwindCSS, tRPC, MariaDB, and React Query, while progressively migrating legacy PHP code to a scalable and maintainable Next.js architecture.
+- Building reusable, accessible, and performance‑focused UI components with strong attention to UX consistency.
+- Participating in cross‑functional planning and product design, collaborating with design, QA, and backend teams to ship reliable and testable features.
+- Applying modern engineering practices including automated testing with Vitest, type safety with TypeScript, and API‑first development using tRPC.
+`,
         skills: [
           "TypeScript",
           "Next.js",
